@@ -15,12 +15,13 @@ import javax.persistence.*;
 public class Article {
 	
     	@Id 
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    @Column(name = "article_id")
-	    private int id;
-    	
-	    @Column(name = "text", columnDefinition = "LONGTEXT")
-	    private String text;
-	    private String titleText;
-	    private List<Article> articles;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+        @Column(name = "article_id")
+	private int id;	  
+	
+	@Column(name = "text", columnDefinition = "LONGTEXT")
+	private String text;
+	
+	private String titleText;
+	private List<Article> articles;
 }
