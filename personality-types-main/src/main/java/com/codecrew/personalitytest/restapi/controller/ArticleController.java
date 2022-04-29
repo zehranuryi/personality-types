@@ -24,20 +24,20 @@ public class ArticleController {
 	
 	@Autowired
 	public ArticleController(ArticleRepository articleRepository) {
-		super();
-		this.articleRepository = articleRepository;
+               super();
+	       this.articleRepository = articleRepository;
 	}
 
 	@GetMapping("all")
-    public ResponseEntity<List<Article>> getAll(){
-        var articles = articleRepository.getAll();
-        return ResponseEntity.ok(articles);
-    }
+        public ResponseEntity<List<Article>> getAll(){
+               var articles = articleRepository.getAll();
+               return ResponseEntity.ok(articles);
+        }
 	
 	@PostMapping("add")
 	public ResponseEntity<Article> add(@Valid @RequestBody Article article) {
-		articleRepository.save(article);
-		return ResponseEntity.ok(article);
+	       articleRepository.save(article);
+	       return ResponseEntity.ok(article);
 	}
 	
 
